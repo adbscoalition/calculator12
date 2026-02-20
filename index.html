@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charlotte Direction Finder</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Charlotte Direction Finder</h1>
+      <p class="subtitle">Like a Qibla finder, but always points to Charlotte, NC.</p>
+      <canvas id="compass" width="320" height="320" aria-label="Direction compass"></canvas>
+      <section class="stats">
+        <p><strong>Current position:</strong> <span id="coords">Locating...</span></p>
+        <p><strong>Distance to Charlotte:</strong> <span id="distance">--</span></p>
+        <p><strong>Bearing to Charlotte:</strong> <span id="bearing">--</span></p>
+        <p><strong>CLT Magnetic Field:</strong> <span id="field">--</span></p>
+      </section>
+      <p class="hint">Secret test spoof: type <code>cltspoof</code> to unlock teleport controls.</p>
+      <section id="spoof-panel" class="spoof hidden" aria-hidden="true">
+        <h2>Teleport (Test Spoofing)</h2>
+        <label>Latitude<input id="spoof-lat" type="number" step="any" placeholder="35.2271" /></label>
+        <label>Longitude<input id="spoof-lon" type="number" step="any" placeholder="-80.8431" /></label>
+        <button id="teleport-btn" type="button">Teleport</button>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
